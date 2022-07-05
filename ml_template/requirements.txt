@@ -1,0 +1,21 @@
+-e .
+
+# third party packages
+cookiecutter
+dvc
+dvc[gdrive]
+sklearn
+pandas
+pytest
+tox
+flake8
+flask
+gunicorn
+mlflow
+pysftp
+icecream
+evidently
+sqlalchemy
+mysqlclient
+mysql-connector-python
+

@@ -56,12 +56,12 @@ git init
     docker network create prometheus-grafana-network --driver bridge
     docker pull mysql:latest
     # start mysql server
-    docker run --network=prometheus-grafana-network -p 3306:3306 --name docker-mysql -v /data/ml_pipeline/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=dl123! -d mysql:latest
+    docker run --network=prometheus-grafana-network -p 3306:3306 --name docker-mysql -v /data/ml_pipeline/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<> -d mysql:latest
     # enter in mysql server as a client
     docker run -it --name=doc-mysql --network=prometheus-grafana-network --rm mysql mysql -hdocker-mysql -uroot -p
     # create database
         - CREATE DATABASE ml_data;
-        - CREATE USER 'ml'@'%' IDENTIFIED BY 'ml123!';
+        - CREATE USER 'ml'@'%' IDENTIFIED BY '<>';
         - GRANT ALL ON *.* TO 'ml'@'%';
         - flush privileges;
 
